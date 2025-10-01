@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">  
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="icon" href="img/ico/UCS.png">
+	<title>Registro exitoso</title>
+</head>
+
+<body>
+	<div class="contenedor">
+		<div class="columna-izquierda">
+			<div class="registro activo" id="registro">
+				<div class="header">
+					<br><h1>EVALUACIÓN REGISTRADA</h1><br>
+					<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16" STYLE="Color:var(--primario)">
+						<path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+						<path d="M10.97 4.97a.235.235 0 0 0-.02.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05z"/>
+					</svg>
+					<br><br><br>
+					<p>Se ha enviado correctamente la información, presione para cerrar</p>
+				</div>
+		
+				<form class="formulario" id="formulario">
+					
+					<script>
+						function cambia_de_pagina(){
+						  location.href="Juridico.html"
+						}
+					  </script>
+
+					
+					<div class="contenedor-boton">
+						<button type="submit" onclick="javascript:cambia_de_pagina();">
+							Continuar
+						</button>
+					</div>
+
+					<script>
+						function cambia_de_pagina1(){
+						  location.href="index.html"
+						}
+					  </script>
+
+					
+					<div class="contenedor-boton">
+						<button type="submit" onclick="javascript:cambia_de_pagina1();">
+							Cerrar
+						</button>
+					</div>
+
+				</form>
+			</div>
+			
+		</div>
+
+		<div class="columna-derecha">
+
+		</div>
+	</div>
+
+	<script src="js/app.js"></script>
+</body>
+</html>

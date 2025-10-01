@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">  
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="icon" href="img/ico/Falco.png">
+	<title>Formulario Línea</title>
+</head>
+
+<body>
+	<div class="contenedor">
+		<div class="columna-izquierda">
+			<div class="registro activo" id="registro">
+				<div class="header-1">
+					<h1>Formulario Línea</h1>
+				</div>
+
+				<form class="formulario" id="formulario">
+
+					<i Style="color: white;-webkit-user-select: none; -ms-user-select: none; user-select: none; /* Standard syntax */">
+						<script id="Fecha" name="Fecha">
+						  function makeArray() {
+							for (i = 0; i < makeArray.arguments.length; i++) this[i + 1] = makeArray.arguments[i]
+						  }
+						  var months = new makeArray('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre');
+						  var date = new Date();
+						  var day = date.getDate();
+						  var month = date.getMonth() + 1;
+						  var yy = date.getYear();
+						  var year = (yy < 1000) ? yy + 1900 : yy;
+						  var hours = date.getHours();
+						  var minutes = date.getMinutes();
+
+						  document.write( day + "/" + months[month] + "/" + year + "  " + hours + ":" + minutes);
+						</script>
+					  </i>
+
+					<div class="contenedor-formulario2">
+						
+						<!-- Zona -->
+						<span for="Zona">Zona*
+							<select onchange="if(this.value !== 'false') location.href = this.value;">
+								<option style="color: #bdb9b9;" value="false">-Elige una opción-</option>
+								<option value="Norte.html">Norte</option>
+								<option value="Centro.html">Centro</option>
+								<option value="Oriente.html">Oriente</option>
+								<option value="Sur.html">Sur</option>
+								<option value="Poniente.html">Poniente</option>
+								<option value="Vial-1.html">Vial 1</option>
+								<option value="Vial-2.html">Vial 2</option>
+								<option value="Vial-3.html">Vial 3</option>
+								<option value="Vial-4.html">Vial 4</option>
+								<option value="Vial-5.html">Vial 5</option>
+								<option value="Vial-6.html">Vial 6 (Hand Held)</option>
+								<option value="Vial-7.html">Vial 7 (Grúas)</option>
+								<option value="Vial-8.html">Vial 8 (Parquímetros e Inmovilizadores)</option>
+								<option value="Metropolitana.html">Metropolitana</option>
+								<option value="Otras.html">Otras</option>
+							</select>
+						</span>
+						
+					<!-- Termina Formulario -->
+
+					
+					
+                    <script>
+                        // Función de validación
+                        function validarFormulario() {
+                            const integrante = document.getElementById('Integrante').value;
+
+                            // Verificar si Evaluadora e Integrante son diferentes de "-Elige una opción-"
+                            if (integrante === "false") {
+                                alert('Por favor, selecciona una Evaluadora e Integrante.');
+                                return false; // Evita que el formulario se envíe
+                            }
+
+                            // Puedes agregar más validaciones si es necesario
+
+                            // Ejecuta cambia_de_pagina() después de la validación exitosa
+                            cambia_de_pagina();
+                            return true; // Permite el envío del formulario
+                        }
+
+                        // Función para cambiar de página y cargar app.js
+                        function cambia_de_pagina() {
+                            setTimeout(function () {
+                                // Coloca aquí la inclusión de app.js
+                                var script = document.createElement('script');
+                                script.src = 'js/app.js';
+                                document.head.appendChild(script);
+                                location.href = 'RegistroJuridico.html';
+                            }, 1500);
+                        }
+                    </script>
+
+
+
+
+				</form>
+			</div>
+
+		</div>
+
+		<div class="columna-derecha">
+
+		</div>
+	</div>
+
+	<script src="js/app.js"></script>
+	
+</body>
+</html>

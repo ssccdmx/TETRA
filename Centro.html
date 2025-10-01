@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">  
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="icon" href="img/ico/Falco.png">
+	<title>Formulario Línea</title>
+</head>
+
+<body>
+	<div class="contenedor">
+		<div class="columna-izquierda">
+			<div class="registro activo" id="registro">
+				<div class="header-1">
+					<h1>Formulario Línea</h1>
+				</div>
+
+				<form class="formulario" id="formulario">
+
+					<i Style="color: white;-webkit-user-select: none; -ms-user-select: none; user-select: none; /* Standard syntax */">
+						<script id="Fecha" name="Fecha">
+						  function makeArray() {
+							for (i = 0; i < makeArray.arguments.length; i++) this[i + 1] = makeArray.arguments[i]
+						  }
+						  var months = new makeArray('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre');
+						  var date = new Date();
+						  var day = date.getDate();
+						  var month = date.getMonth() + 1;
+						  var yy = date.getYear();
+						  var year = (yy < 1000) ? yy + 1900 : yy;
+						  var hours = date.getHours();
+						  var minutes = date.getMinutes();
+
+						  document.write( day + "/" + months[month] + "/" + year + "  " + hours + ":" + minutes);
+						</script>
+					  </i>
+
+					<div class="contenedor-formulario2">
+						
+						<!-- Zona -->
+						<span for="Zona">Zona*
+							<select id="Zona" name="Zona" onchange="location=this.value">
+								<option style="color: #bdb9b9;"value="Centro">-Centro-</option>
+								<option value="Norte.html">Norte</option>
+								<option value="Centro.html">Centro</option>
+								<option value="Oriente.html">Oriente</option>
+								<option value="Sur">Sur</option>
+								<option value="Poniente">Poniente</option>
+								<option value="Vial 1">Vial 1</option>
+								<option value="Vial 2">Vial 2</option>
+								<option value="Vial 3">Vial 3</option>
+								<option value="Vial 4">Vial 4</option>
+								<option value="Vial 5">Vial 5</option>
+								<option value="Vial 6">Vial 6 (Hand Held)</option>
+								<option value="Vial 7">Vial 7 (Grúas)</option>
+								<option value="Vial 8">Vial 8 (Parquimetros e Imovilizadores)</option>
+								<option value="Metropolitana">Metropolitana</option>
+								<option value="Otras">Otras</option>
+							</select>
+						</span>
+						
+						<!-- Sector -->
+						<span for="Sector">Sector*
+							<select id="Sector" name="Sector">
+								<option style="color: #bdb9b9;"value="false">-Elige una opción-</option>
+								
+							</select>
+						</span>
+
+					</div>	
+					
+					
+
+					<br><br>
+
+					<div class="contenedor-formulario" >
+						<label for="No_Unidad">Unidad MX-</label>
+						<div class="contenedor-input-fecha">
+							<input  type="text" id="No_Unidad" name="No_Unidad" placeholder="000A-0">
+						</div>
+					</div>
+					<br><br>
+
+					<div class="contenedor-formulario" >
+						<label for="Observaciones">Observaciones</label>
+						<div style="width: 350px;"class="contenedor-input-fecha">
+							<input  type="text" id="Observaciones" name="Observaciones" placeholder="">
+						</div>
+					</div>
+
+					<!-- Termina Formulario -->
+
+					
+					
+                    <script>
+                        // Función de validación
+                        function validarFormulario() {
+                            const integrante = document.getElementById('Integrante').value;
+
+                            // Verificar si Evaluadora e Integrante son diferentes de "-Elige una opción-"
+                            if (integrante === "false") {
+                                alert('Por favor, selecciona una Evaluadora e Integrante.');
+                                return false; // Evita que el formulario se envíe
+                            }
+
+                            // Puedes agregar más validaciones si es necesario
+
+                            // Ejecuta cambia_de_pagina() después de la validación exitosa
+                            cambia_de_pagina();
+                            return true; // Permite el envío del formulario
+                        }
+
+                        // Función para cambiar de página y cargar app.js
+                        function cambia_de_pagina() {
+                            setTimeout(function () {
+                                // Coloca aquí la inclusión de app.js
+                                var script = document.createElement('script');
+                                script.src = 'js/app.js';
+                                document.head.appendChild(script);
+                                location.href = 'RegistroJuridico.html';
+                            }, 1500);
+                        }
+                    </script>
+
+
+				<br><div class="contenedor-boton">
+					<button type="submit" onclick="javascript:validarFormulario();">
+						Registrar
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+							<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+						</svg>
+					</button>
+				</div>
+
+				</form>
+			</div>
+
+		</div>
+
+		<div class="columna-derecha">
+
+		</div>
+	</div>
+
+	<script src="js/app.js"></script>
+	
+</body>
+</html>

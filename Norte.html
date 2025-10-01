@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">  
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="icon" href="img/ico/Falco.png">
+	<title>Formulario Línea</title>
+</head>
+
+<script>
+document.getElementById('formulario').addEventListener('submit', function (e) {
+	const input = document.getElementById('No_Unidad');
+	const value = input.value.trim().toUpperCase();
+
+	// Verifica si ya tiene el prefijo MX-
+	if (!value.startsWith('MX-')) {
+		input.value = 'MX-' + value;
+	}
+});
+</script>
+
+<body>
+	<div class="contenedor">
+		<div class="columna-izquierda">
+			<div class="registro activo" id="registro">
+				<div class="header-1">
+					<h1>Formulario Línea</h1>
+				</div>
+
+				<form class="formulario" id="formulario">
+
+					<i Style="color: white;-webkit-user-select: none; -ms-user-select: none; user-select: none; /* Standard syntax */">
+						<script id="Fecha" name="Fecha">
+						  function makeArray() {
+							for (i = 0; i < makeArray.arguments.length; i++) this[i + 1] = makeArray.arguments[i]
+						  }
+						  var months = new makeArray('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre');
+						  var date = new Date();
+						  var day = date.getDate();
+						  var month = date.getMonth() + 1;
+						  var yy = date.getYear();
+						  var year = (yy < 1000) ? yy + 1900 : yy;
+						  var hours = date.getHours();
+						  var minutes = date.getMinutes();
+
+						  document.write( day + "/" + months[month] + "/" + year + "  " + hours + ":" + minutes);
+						</script>
+					</i>
+
+					<div class="contenedor-formulario2">
+						
+						<!-- Zona -->
+						<span style="color:var(--primario);font-size: 24px; font-weight: 1000;	-webkit-user-select: none; /* Safari */;-ms-user-select: none; /* IE 10 and IE 11 */;user-select: none; /* Standard syntax */"  for="Zona">Zona Norte
+							<select hidden id="Zona" name="Zona">
+								<option style="color: #bdb9b9;"value="Zona Norte">-Norte-</option>
+							</select>
+						</span><br>
+						
+						<!-- Sector -->
+						<span for="Sector">Sector*
+							<select style="text-transform: uppercase;" id="Sector" name="Sector">
+								<option style="color: #bdb9b9;"value="false">-Elige una opción-</option>
+								<option value="Aragon">Aragon</option>
+								<option value="Arenal">Arenal</option>
+								<option value="Consulado">Consulado</option>
+								<option value="Congreso">Congreso</option>
+								<option value="Cuautepec">Cuautepec</option>
+								<option value="Cuchilla">Cuchilla</option>
+								<option value="Iztaccihuatl">Iztaccihuatl</option>
+								<option value="Lindavista">Lindavista</option>
+								<option value="Merced-Balbuena">Merced-Balbuena</option>
+								<option value="Moctezuma">Moctezuma</option>
+								<option value="Pantitlan">Pantitlan</option>
+								<option value="Pradera">Pradera</option>
+								<option value="Quiroga">Quiroga</option>
+								<option value="Tepeyac">Tepeyac</option>
+								<option value="Ticoman">Ticoman</option>
+								<option value="Tlacotal">Tlacotal</option>
+								<option value="Zaragoza">Zaragoza</option>
+							</select>
+						</span>
+
+										
+						<!-- Tipo -->
+						<span style="text-transform: uppercase;" for="Tipo">Tipo*
+							<select style="text-transform: uppercase;" id="Tipo" name="Tipo">
+								<option style="color: #bdb9b9;"value="false">-Elige una opción-</option>
+								<option value="Dodge Ram">Dodge Ram</option>
+								<option value="Ford F-150">Ford F-150</option>
+								<option value="Ford Explorer">Ford Explorer</option>
+								<option value="Nissan Sentra">Nissan Sentra</option>
+							</select>
+						</span>
+
+					
+						<!-- Unidad -->
+						<div class="contenedor-formulario" >
+							<label for="No_Unidad">Unidad MX-*</label>
+							<div class="contenedor-input-fecha">
+								<input style="text-transform: uppercase;" type="text" id="No_Unidad" name="No_Unidad" placeholder="000A-0">
+							</div>
+						</div>
+
+
+						
+						<!-- Inventario -->
+						<div class="contenedor-formulario" >
+							<label for="Inventario">Inventario*</label>
+							<div class="contenedor-input-fecha">
+								<input style="text-transform: uppercase;" type="text" id="Inventario" name="Inventario" placeholder="">
+							</div>
+						</div>
+
+						
+						<!-- ISSI	 -->
+						<div class="contenedor-formulario" >
+							<label for="ISSI">ISSI*</label>
+							<div style="width: 150px;"class="contenedor-input-fecha">
+								<label>ISSI</label>
+							</div>
+						</div>
+						
+						
+						<!-- TEI -->
+						<div class="contenedor-formulario" >
+							<label for="Nota">TEI*</label>
+							<div style="width: 250px;"class="contenedor-input-fecha">
+								<input  type="text" id="TEI" name="TEI" placeholder="">
+							</div>
+						</div>
+
+
+
+						<!-- Nota -->
+						<div class="contenedor-formulario" >
+							<label for="Nota">Nota</label>
+							<div style="width: 350px;"class="contenedor-input-fecha">
+								<input  type="text" id="Nota" name="Nota" placeholder="">
+							</div>
+						</div>
+
+					</div>
+					
+
+					
+                    <script>
+                        // Función de validación
+                        function validarFormulario() {
+                            const integrante = document.getElementById('Integrante').value;
+
+                            // Verificar si Evaluadora e Integrante son diferentes de "-Elige una opción-"
+                            if (integrante === "false") {
+                                alert('Por favor, selecciona una Evaluadora e Integrante.');
+                                return false; // Evita que el formulario se envíe
+                            }
+
+                            // Puedes agregar más validaciones si es necesario
+
+                            // Ejecuta cambia_de_pagina() después de la validación exitosa
+                            cambia_de_pagina();
+                            return true; // Permite el envío del formulario
+                        }
+
+                        // Función para cambiar de página y cargar app.js
+                        function cambia_de_pagina() {
+                            setTimeout(function () {
+                                // Coloca aquí la inclusión de app.js
+                                var script = document.createElement('script');
+                                script.src = 'js/app.js';
+                                document.head.appendChild(script);
+                                location.href = 'RegistroJuridico.html';
+                            }, 1500);
+                        }
+                    </script>
+
+
+					<br>
+					<div class="contenedor-boton">
+						<button type="submit" onclick="javascript:validarFormulario();">
+							Registrar
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+								<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+							</svg>
+						</button>
+					</div>
+
+				</form>
+				<!-- Termina Formulario -->
+
+			</div>
+
+		</div>
+
+		<div class="columna-derecha">
+		</div>
+
+	</div>
+
+	<script src="js/app.js"></script>
+	
+</body>
+</html>

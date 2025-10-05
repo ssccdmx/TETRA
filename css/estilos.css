@@ -3,6 +3,7 @@
 	--texto: #55585A;
 	--primario: #9D2148;
 	--secundario: #B28E5C;
+	--terciario: #dabc94;
 	--texto: #55585A;
 	--background: #eee;
 
@@ -28,7 +29,7 @@ body {
 }
 
 .contenedor {
-	width: 80%;
+	width: 90%;
 	border-radius: 10px;
 	overflow: hidden;
 	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
@@ -41,6 +42,10 @@ body {
 }
 
 .columna-izquierda {
+	padding: 40px;
+}
+
+.columna-izquierda-full {
 	padding: 40px;
 }
 
@@ -64,12 +69,14 @@ body {
 	background-image: url("../img/Index.png");
 	background-size: cover;
 	background-position-x: center;
+	background-position-y: center;
 }
 
 .columna-derechaNorte {
 	background-image: url("../img/Norte.png");
 	background-size: cover;
-	background-position-x: right;
+	background-position-x: center;
+	background-position-y: center;
 }
 
 .columna-derechaCentro {
@@ -155,11 +162,6 @@ small {
 	font-size: 11px;
 }
 
-.contenedor-input-fecha {
-	position: relative;
-	width: 40%;
-}
-
 select {
 	position: relative;
 	width: 40%;
@@ -238,6 +240,7 @@ select {
 	text-align: left;
 	margin-left: 10px;
 	padding-left: 15px;
+	margin-bottom: 12px;
 }
 
 input:focus {
@@ -272,10 +275,29 @@ input:focus {
 .contenedor-formulario2 {
 	text-align: center;
 	align-items: center;
-
+	justify-content: center;
 	-webkit-user-select: none; /* Safari */
   	-ms-user-select: none; /* IE 10 and IE 11 */
   	user-select: none; /* Standard syntax */
+}
+
+.contenedor-formulario3 {
+	text-align: center;
+	align-items: center;
+	width: 50%;
+	display:inline-table;
+	justify-content: start;
+	padding: 5px;
+	-webkit-user-select: none; /* Safari */
+  	-ms-user-select: none; /* IE 10 and IE 11 */
+  	user-select: none; /* Standard syntax */
+}
+
+.contenedor-inbox {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	margin-bottom: 12px;
 }
 
 .contenedor-boton {
@@ -294,7 +316,7 @@ button {
 	padding: 0 50px;
 	display: flex;
 	align-items: center;
-	justify-content: end;
+	justify-content: center;
 	border: 2px solid var(--primario);
 	cursor: pointer;
 	transition: .3s ease all;
@@ -314,4 +336,11 @@ button svg {
 	margin-left: 10px;
 	width: 20px;
 	height: 20px;
+}
+
+
+@media (max-width: 900px) {
+  .contenedor {
+    width: 1200px;
+  }
 }

@@ -10,6 +10,16 @@
 	<link rel="stylesheet" href="css/estilos.css">
 	<link rel="icon" href="img/ico/Falco.png">
 	<title>Formulario Línea</title>
+	<script>window.addEventListener( "pageshow", function ( event ) {
+  		var historyTraversal = event.persisted || 
+                         ( typeof window.performance != "undefined" && 
+                              window.performance.navigation.type === 2 );
+  		if ( historyTraversal ) {
+    	// Refresca la página
+    	window.location.reload();
+  		}
+		});
+	</script>
 </head>
 
 <body>
@@ -43,7 +53,7 @@
 					<div class="contenedor-formulario2">
 						
 						<!-- Zona -->
-						<span for="Zona">Zona*
+						<span for="Zona">*Zona
 							<select onchange="if(this.value !== 'false') location.href = this.value;">
 								<option style="color: #bdb9b9;" value="false">-Elige una opción-</option>
 								<option value="Norte.html">Norte</option>
@@ -51,14 +61,7 @@
 								<option value="Oriente.html">Oriente</option>
 								<option value="Sur.html">Sur</option>
 								<option value="Poniente.html">Poniente</option>
-								<option value="Vial-1.html">Vial 1</option>
-								<option value="Vial-2.html">Vial 2</option>
-								<option value="Vial-3.html">Vial 3</option>
-								<option value="Vial-4.html">Vial 4</option>
-								<option value="Vial-5.html">Vial 5</option>
-								<option value="Vial-6.html">Vial 6 (Hand Held)</option>
-								<option value="Vial-7.html">Vial 7 (Grúas)</option>
-								<option value="Vial-8.html">Vial 8 (Parquímetros e Inmovilizadores)</option>
+								<option value="Vial-1.html">Vialidad y Tránsito</option>
 								<option value="Metropolitana.html">Metropolitana</option>
 								<option value="Otras.html">Otras</option>
 							</select>
@@ -98,17 +101,17 @@
                         }
                     </script>
 
-
-
+					</div>
 
 				</form>
+
 			</div>
 
 		</div>
 
 		<div class="columna-derecha">
-
 		</div>
+
 	</div>
 
 	<script src="js/app.js"></script>

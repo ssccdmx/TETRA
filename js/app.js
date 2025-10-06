@@ -1,19 +1,30 @@
 document.getElementById('formulario').addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const integrante = document.getElementById('Integrante').value;
-    const Area = document.getElementById('Area').value;
+    const Sector = document.getElementById('Sector').value;
+    const Tipo = document.getElementById('Tipo').value;
 
-    // Verificar si Evaluadora e Integrante son diferentes de "-Elige una opción-"
-    if (integrante === "false") {
-        alert('Por favor, seleccione Integrante.');
+    // Verificar Capos Vacios "-Elige una opción-"
+    if (Sector === "false"||Tipo === "false") {
+        alert('Por favor, llene los campos obligatorios');
         return; // Evita que el formulario se envíe
     }
+
+    // Validar campos de texto obligatorios
+    const Inventario = document.getElementById('Inventario').value.trim();
+    const Economico = document.getElementById('Economico').value.trim();
+    const TEI = document.getElementById('TEI').value.trim();
+
+    if (!Inventario || !Economico || !TEI) {
+        alert('Por favor, complete los campos "Inventario", "Económico" y "TEI".');
+        return;
+    }
+
 
     // Actualizar la fecha después de la validación exitosa
     document.getElementById('Fecha').textContent = obtenerFechaActual();
 
-    const respuesta = await fetch('https://sheetdb.io/api/v1/odv1hdkt9ger6', {
+    const respuesta = await fetch('https://sheetdb.io/api/v1/v4ke1po7azl6t', {
         method: 'POST',
         mode: 'cors',
         headers: {
@@ -21,10 +32,15 @@ document.getElementById('formulario').addEventListener('submit', async (e) => {
         },
         body: JSON.stringify({
             "Fecha": obtenerFechaActual(),
-            "Area": Area,
-            "Integrante": integrante,
-            "Folio": document.getElementById('Folio').value,
-            "Observaciones": document.getElementById('Observaciones').value
+            "Zona": document.getElementById('Zona').value.toUpperCase(),
+            "Sector": Sector.toUpperCase(),
+            "Tipo": Tipo.toUpperCase(),
+            "Inventario": Inventario.toUpperCase(),
+            "Economico": formatearEconomico(Economico),
+            "ISSI": document.getElementById('ISSI').value.toUpperCase(),
+            "TEI": TEI.toUpperCase(),
+            "Observaciones": document.getElementById('Observaciones').value.toUpperCase(),
+            "Nota": document.getElementById('Nota').value.toUpperCase()
         })
     });
 
@@ -41,6 +57,11 @@ function obtenerFechaActual() {
 
     // Formatear la fecha como "DD/MM/AAAA HH:MM"
     return `${day}/${month}/${year} ${hours}:${minutes}`;
+}
+
+function formatearEconomico(valor) {
+    valor = valor.trim().toUpperCase();
+    return valor.startsWith('MX-') ? valor : 'MX-' + valor;
 }
 
 function agregarCeroAlPrincipio(valor) {
@@ -73,7 +94,7 @@ const codigosSector = {
     'Merced-Balbuena': '4931',
     'Congreso': '4988',
     //IZC
-    'Iztaccihualtl': '4932',
+    'Iztaccihuatl': '4932',
     'Tlacotal': '4933',
     'Pantitlan': '4934',
     //COY
@@ -167,7 +188,7 @@ const codigosSector = {
 
 function calcularISSI() {
   const sectorSelect = document.getElementById('Sector');
-  const unidadInput = document.getElementById('No_Unidad');
+  const unidadInput = document.getElementById('Economico');
   const issiInput = document.getElementById('ISSI');
 
   if (!sectorSelect || !unidadInput || !issiInput) return;
@@ -203,7 +224,7 @@ function calcularISSI() {
 
 document.addEventListener('DOMContentLoaded', function () {
   const sectorSelect = document.getElementById('Sector');
-  const unidadInput = document.getElementById('No_Unidad');
+  const unidadInput = document.getElementById('Economico');
 
   if (sectorSelect && unidadInput) {
     sectorSelect.addEventListener('change', calcularISSI);

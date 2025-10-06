@@ -339,8 +339,23 @@ button svg {
 }
 
 
-@media (max-width: 900px) {
+@media (width: 1024px) {
   .contenedor {
-    width: 1200px;
+    width: 80%;
   }
+
+
+}
+
+
+@media (width: 1024px) {
+	.contenedor {
+		width: 80%;
+	}
+
+	.columna-izquierda {
+		padding: 40px;
+		width: 1000px;
+	}
+
 }

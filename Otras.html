@@ -29,7 +29,7 @@
 		<div class="columna-izquierda-full">
 			<div class="registro activo" id="registro">
 				<div class="header-1">
-					<h1>Zona Centro</h1>
+					<h1>Otras</h1>
 				</div>
 
 				<form class="formulario" id="formulario">
@@ -56,23 +56,16 @@
 						
 						<!-- Zona -->
 						<select hidden id="Zona" name="Zona">
-							<option style="color: #bdb9b9;"value="Zona Centro"></option>
+							<option style="color: #bdb9b9;"value="Zona Norte"></option>
 						</select>
 						
 						<!-- Sector style="text-transform: uppercase;"-->
-						<span for="Sector">*Sector
-							<select id="Sector" name="Sector">
-								<option style="color: #bdb9b9;"value="false">-Elige una opción-</option>
-								<option value='Angel-Zona Rosa'>Angel-Zona Rosa</option>
-								<option value='Asturias'>Asturias</option>
-								<option value='Buenavista'>Buenavista</option>
-								<option value='Centro'>Centro</option>
-								<option value='Morelos'>Morelos</option>
-								<option value='Revolucion-Alameda'>Revolucion-Alameda</option>
-								<option value='Roma'>Roma</option>
-								<option value='Tlatelolco'>Tlatelolco</option>
-							</select>
-						</span>
+						<div class="contenedor-formulario" >
+							<label for="Sector">Área</label>
+							<div style="width: 350px;"class="contenedor-input-fecha">
+								<input  type="text" id="Sector" name="Sector" placeholder="">
+							</div>
+						</div>
 
 										
 						<!-- Tipo -->
@@ -124,7 +117,7 @@
 						<div class="contenedor-formulario" >
 							<label for="ISSI">*ISSI</label>
 							<div style="width: 150px;">
-								<input style="background-color: var(--terciario); font-size: 22px; font-weight: 900;" type="text" id="ISSI" name="ISSI" readonly>
+								<input  maxlength="7" style="width: 300px; text-transform: uppercase;" type="text" id="ISSI" name="ISSI" placeholder="">
 							</div>
 						</div><br>
 

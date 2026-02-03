@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;700&display=swap" rel="stylesheet">  
+	<link rel="stylesheet" href="css/estilos.css">
+	<link rel="icon" href="img/ico/Falco.png">
+	<title>Formulario Línea</title>
+</head>
+
+	<script>
+	document.getElementById('formulario').addEventListener('submit', function (e) {
+		const input = document.getElementById('No_Unidad');
+		const value = input.value.trim().toUpperCase();
+
+		// Verifica si ya tiene el prefijo MX-
+		if (!value.startsWith('MX-')) {
+			input.value = 'MX-' + value;
+		}
+		});
+	</script>
+
+<body>
+	<div class="contenedor">
+		<div class="columna-izquierda-full">
+			<div class="registro activo" id="registro">
+				<div class="header-1">
+					<h1>FORMULARIO LÍNEA</h1>
+				</div>
+
+				<form class="formulario" id="formulario">
+
+					<i Style="color: white;-webkit-user-select: none; -ms-user-select: none; user-select: none; /* Standard syntax */">
+						<script id="Fecha" name="Fecha">
+						  function makeArray() {
+							for (i = 0; i < makeArray.arguments.length; i++) this[i + 1] = makeArray.arguments[i]
+						  }
+						  var months = new makeArray('Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre');
+						  var date = new Date();
+						  var day = date.getDate();
+						  var month = date.getMonth() + 1;
+						  var yy = date.getYear();
+						  var year = (yy < 1000) ? yy + 1900 : yy;
+						  var hours = date.getHours();
+						  var minutes = date.getMinutes();
+
+						  document.write( day + "/" + months[month] + "/" + year + "  " + hours + ":" + minutes);
+						</script>
+					</i>
+
+					<div class="contenedor-formulario2">
+						
+						<!-- Sector style="text-transform: uppercase;"-->
+						<div class="contenedor-formulario" >
+							<label for="Sector">Área</label>
+							<div style="width: 80%;"class="contenedor-input-fecha">
+								<input type="text" id="Sector" name="Sector" list="listaAreas" placeholder="Escribe o selecciona">
+								<datalist id="listaAreas">
+									
+								
+								<option value='ABASTO-REFORMA'>
+								<option value='ALPES'>
+								<option value='ANGEL-ZONA ROSA'>
+								<option value='ARAGON'>
+								<option value='ARENAL'>
+								<option value='ASTURIAS'>
+								<option value='BUENAVISTA'>
+								<option value='CENTRO'>
+								<option value='CHAPULTEPEC'>
+								<option value='CHURUBUSCO'>
+								<option value='CLAVERIA'>
+								<option value='COAPA'>
+								<option value='CONGRESO'>
+								<option value='CONSULADO'>
+								<option value='COYOACAN'>
+								<option value='CUAJIMALPA'>
+								<option value='CUAUTEPEC'>
+								<option value='CUCHILLA'>
+								<option value='CUITLAHUAC'>
+								<option value='CULHUACAN'>
+								<option value='DEL VALLE'>
+								<option value='DINAMO'>
+								<option value='EMBAJADAS'>
+								<option value='EL YAQUI'>
+								<option value='ESTRELLA'>
+								<option value='FUENTE'>
+								<option value='GRANJAS'>
+								<option value='HORMIGA'>
+								<option value='HOSPITALES'>
+								<option value='IZTACCIHUATL'>
+								<option value='LA NORIA'>
+								<option value='LA RAZA'>
+								<option value='LINDAVISTA'>
+								<option value='MERCED-BALBUENA'>
+								<option value='MILPA ALTA'>
+								<option value='MIXQUIC'>
+								<option value='MOCTEZUMA'>
+								<option value='MORELOS'>
+								<option value='NAPOLES'>
+								<option value='NARVARTE-ALAMOS'>
+								<option value='NATIVITAS'>
+								<option value='OASIS'>
+								<option value='PADIERNA'>
+								<option value='PANTITLAN'>
+								<option value='PLATEROS'>
+								<option value='POLANCO'>
+								<option value='PORTALES'>
+								<option value='PRADERA'>
+								<option value='QUETZAL'>
+								<option value='QUIROGA'>
+								<option value='ALAMEDA-REVOLUCION'>
+								<option value='ROMA'>
+								<option value='SAN ANGEL'>
+								<option value='SAN JERONIMO'>
+								<option value='SANTA CRUZ'>
+								<option value='SANTA FE'>
+								<option value='SOTELO'>
+								<option value='TACUBA'>
+								<option value='TACUBAYA'>
+								<option value='TAXQUEÑA'>
+								<option value='TECOMITL'>
+								<option value='TEOTONGO'>
+								<option value='TEPEPAN'>
+								<option value='TEPEYAC'>
+								<option value='TEZONCO'>
+								<option value='TICOMAN'>
+								<option value='TLACOTAL'>
+								<option value='TLATELOLCO'>
+								<option value='TOPILEJO'>
+								<option value='UNIVERSIDAD'>
+								<option value='XOTEPINGO'>
+								<option value='ZAPOTITLA'>
+								<option value='ZARAGOZA'>
+
+								<option value='SUBSECRETARIA DE CONTROL DE TRANSITO (ANUBIS)'>
+								<option value='NORMATIVIDAD DE TRANSITO'>
+								<option value='DIRECCION GENERAL DE OPERACION DE TRANSITO'>
+								<option value='DIRECCION GENERAL INGENIERIA DE TRANSITO'>
+								<option value='DISPOSITIVOS FIJOS'>
+								<option value='DISPOSITIVOS MOVILES'>
+								<option value='SUBDIRECCION DE CONTROL TRANSITO'>
+								<option value='ZONA VIAL 1'>
+								<option value='ZONA VIAL 2'>
+								<option value='ZONA VIAL 3'>
+								<option value='ZONA VIAL 4'>
+								<option value='ZONA VIAL 5'>
+								<option value='ZONA VIAL 7'>
+								<option value='ZONA VIAL 8'>
+
+								<option value='SUBSECRETARIA DE SISTEMA PENITENCIARIO (ORCUS)'>
+								<option value='SUBSECRETARIA DE INTELIGENCIA E INVESTIGACION POLICIAL (JAGUAR)'>
+								<option value='DIRECCION GENERAL DE INVESTIGACION DE DELITOS DE MAYOR INCIDENCIA (DRAGONES )'>
+								<option value='DIRECCION EJECUTIVA DE COMUNICACIONES (FALCO)'>
+								<option value='DIRECCION GENERAL ASUNTOS INTERNOS (PRETOR)'>
+								<option value='DIRECCION GENERAL ASUNTOS JURIDICOS'>
+								<option value='DIRECCION GENERAL REGIONAL AOB (JACIEL)'>
+								<option value='DIRECCION GENERAL REGIONAL AZC (MATEO)'>
+								<option value='DIRECCION GENERAL REGIONAL BJ (ABRAHAM)'>
+								<option value='DIRECCION GENERAL REGIONAL COY (PROMETEO)'>
+								<option value='DIRECCION GENERAL REGIONAL CUH (ELISEO)'>
+								<option value='DIRECCION GENERAL REGIONAL CUJ (NOE)'>
+								<option value='DIRECCION GENERAL REGIONAL GAM (XOLOTL)'>
+								<option value='DIRECCION GENERAL REGIONAL IZC '>
+								<option value='DIRECCION GENERAL REGIONAL IZT (YAAKOV)'>
+								<option value='DIRECCION GENERAL REGIONAL MA (MIGUEL)'>
+								<option value='DIRECCION GENERAL REGIONAL MC (LEONIDAS)'>
+								<option value='DIRECCION GENERAL REGIONAL MH (RAFAEL)'>
+								<option value='DIRECCION GENERAL REGIONAL TLH (URIEL)'>
+								<option value='DIRECCION GENERAL REGIONAL TLP (HELIOS)'>
+								<option value='DIRECCION GENERAL REGIONAL VCA (BALAM)'>
+								<option value='DIRECCION GENERAL REGIONAL XOC (GABRIEL)'>
+								<option value='DIRECCION GENERAL ZONA CENTRO (SANTIAGO)'>
+								<option value='DIRECCION GENERAL ZONA NORTE (QUETZALCOATL)'>
+								<option value='DIRECCION GENERAL ZONA ORIENTE (GLADIADOR)'>
+								<option value='DIRECCION GENERAL ZONA PONIENTE (HERACLES)'>
+								<option value='DIRECCION GENERAL ZONA SUR (DAVID)'>
+								<option value='UNIDAD METROPOLITANA DE OPERACIONES ESPECIALES (UMOE)'>
+
+								<option value='COORDINACION GENERAL POLICIA METROPOLITANA (OCELOTL)'>
+								<option value='FUERZA DE TAREA (ZORROS)'>
+								<option value='GEM (RELAMPAGO)'>
+								<option value='POLICÍA DEL TRANSPORTE (MARCO POLO)'>
+								<option value='UPM AMBIENTAL (FAUNO)'>
+								<option value='UPM FEMENIL (ATENEA)'>
+								<option value='UPM MONTADA'>
+								<option value='UPM ORIENTE (GUERRERO)'>
+								<option value='UPM PONIENTE (CICLON)'>
+
+								<option value='PREVENCION DEL DELITO'>
+								<option value='BRIGADA DE VIGILANCIA ANIMAL (AZOR)'>
+								<option value='DIRECCION EJECUTIVA DE LA POLICIA TURISTICA'>
+								<option value='DGIC INTELIGENCIA '>
+								<option value='ERUM (ANDOR)'>
+								<option value='CONDORES'>
+								<option value='DIRECCION EJECUTIVA DE LA UNIDAD DE CONTACTO DEL SECRETARIO - UCS (IRIS)'>
+								<option value='C2 CENTRO HISTORICO'>
+								<option value='C2 NORTE'>
+								<option value='C2 ORIENTE'>
+								<option value='C2 PONIENTE'>
+								<option value='C2 SUR'>
+
+
+
+								</datalist>
+							</div>
+						</div>
+						
+						<br>
+						<br>
+						<div class="contenedor-formulario" >
+							<div class="header-2">Datos Unidad</div>
+							<br>
+						</div>
+
+										
+						<!-- Tipo -->
+						<span for="Tipo">*Tipo
+							<select id="Tipo" name="Tipo" style="width: 70%;">
+								<option style="color: #bdb9b9;"value="false">-Elige una opción-</option>
+								<option value="NISSAN SENTRA">NISSAN SENTRA</option>
+								<option value="DODGE RAM">DODGE RAM</option>
+								<option value="FORD EXPLORER">FORD EXPLORER</option>
+								<option value="FORD F150">FORD F150</option>
+								<option value="DODGE CHARGER">DODGE CHARGER</option>
+								<option value="OTRO">OTRO</option>
+							</select>
+						</span>
+
+
+					
+						<div style="padding-top: 5px;" class="contenedor-formulario">
+
+
+						
+							<!-- Unidad -->
+							<div class="contenedor-formulario3" >
+								<label for="Economico">*Unidad MX-</label>
+								<div >
+									<input maxlength="6" style="width: 80%; text-transform: uppercase;" type="text" id="Economico" name="Economico" placeholder="000A-0">
+								</div>
+							</div>
+
+							<!-- Inventario -->
+							<div class="contenedor-formulario3" >
+								<label for="Inventario">*Inventario</label>
+								<div>
+									<input maxlength="5" style="width: 80%; text-transform: uppercase;" type="text" id="Inventario" name="Inventario" placeholder="">
+								</div>
+							</div>
+
+						</div>
+
+
+						<br><br><br>
+						<div class="contenedor-formulario" >
+							<div class="header-2">Datos Radio</div>
+							<br>
+						</div>
+						
+				
+						<!-- TEI -->
+						<div class="contenedor-formulario" >
+							<label for="TEI">*TEI</label>
+							<div>
+								<input  maxlength="18" style="width: 300px; text-transform: uppercase;" type="text" id="TEI" name="TEI" placeholder="">
+							</div>
+						</div><br>
+
+						
+						<!-- ISSI	 -->
+						<div class="contenedor-formulario" >
+							<label for="ISSI">*ISSI</label>
+							<div style="width: 150px;">
+								<input style="background-color: var(--terciario); font-size: 22px; font-weight: 900;" type="text" id="ISSI" name="ISSI" readonly>
+							</div>
+						</div><br>
+
+
+						<br>
+						<br>
+						<div class="contenedor-formulario" >
+							<div class="header-2">Otros</div>
+							<br>
+						</div>
+						
+
+						
+						<!-- Observaciones -->
+						<span for="Observaciones">Observaciones
+							<select id="Observaciones" name="Observaciones">
+								<option style="color: #bdb9b9;"value="">-Elige una opción-</option>
+								<option value="MEMO GPS">MEMO GPS</option>
+								<option value="CITA RESAGADA">CITA RESAGADA</option>
+								<option value="SOLICITUD POR OFICIO">SOLICITUD POR OFICIO</option>
+								<option value="D.O.S">D.O.S</option>
+								<option value="SIN CITA">SIN CITA</option>
+								<option value="OTRA">OTRA</option>
+							</select>
+						</span>
+
+
+
+						<!-- Nota -->
+						<div class="contenedor-formulario" >
+							<label for="Nota">Nota</label>
+							<div style="width: 350px;"class="contenedor-input-fecha">
+								<input  type="text" id="Nota" name="Nota" placeholder="">
+							</div>
+						</div>
+
+					</div>
+					
+
+					
+                    <script>
+                        // Función de validación
+                        function validarFormulario() {
+                            const Sector = document.getElementById('Sector').value;
+    						const Tipo = document.getElementById('Tipo').value;
+
+                            // Verificar Capos Vacios "-Elige una opción-"
+							if (Sector === "false"||Tipo === "false") {
+								alert('Por favor, llene los campos obligatorios');
+								return; // Evita que el formulario se envíe
+							}
+
+                            // Validar campos de texto obligatorios
+							const Inventario = document.getElementById('Inventario').value.trim();
+							const Economico = document.getElementById('Economico').value.trim();
+							const TEI = document.getElementById('TEI').value.trim();
+
+							if (!Inventario || !Economico || !TEI) {
+								alert('Por favor, complete los campos "Inventario", "Económico" y "TEI".');
+								return;
+							}
+
+
+                            // Ejecuta cambia_de_pagina() después de la validación exitosa
+                            cambia_de_pagina();
+                            return true; // Permite el envío del formulario
+                        }
+
+                        // Función para cambiar de página y cargar app.js
+                        function cambia_de_pagina() {
+                            setTimeout(function () {
+                                // Coloca aquí la inclusión de app.js
+                                var script = document.createElement('script');
+                                script.src = 'js/app.js';
+                                document.head.appendChild(script);
+                                location.href = 'RegistroExitoso.html';
+                            }, 1500);
+                        }
+                    </script>
+
+
+					<br>
+					<div class="contenedor-boton">
+						<button type="submit" onclick="javascript:validarFormulario();">
+							Registrar
+							<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+								<path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+							</svg>
+						</button>
+					</div>
+
+				</form>
+				<!-- Termina Formulario -->
+
+			</div>
+
+		</div>
+
+		<div class="columna-derecha">
+		</div>
+
+	</div>
+
+	<script src="js/app.js"></script>
+	
+</body>
+</html>

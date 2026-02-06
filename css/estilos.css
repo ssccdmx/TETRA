@@ -37,12 +37,19 @@ body {
 	min-height: 60vh;
 	margin-top: 25px;
 	margin-bottom: 35px;
-	display: grid;
 	grid-template-columns: 1fr 1fr;
+	text-align: center;
+}
+
+.columna {
+	padding: 30px;
+	width: 100%;
+	text-align: center;
 }
 
 .columna-izquierda {
 	padding: 40px;
+	width: 100%;
 }
 
 .columna-izquierda-full {
@@ -51,7 +58,7 @@ body {
 
 .contenedor-2 {
 	width: 90%;
-	max-width: 800px;
+	max-width: auto;
 	border-radius: 10px;
 	overflow: hidden;
 	box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
@@ -65,11 +72,17 @@ body {
     user-select: none; /* Standard syntax */
 }
 
+.datalist{
+	background-color: var(--primario);
+}
+
 .columna-derecha {
+	overflow: hidden;
 	background-image: url("../img/Index.png");
 	background-size: cover;
 	background-position-x: center;
 	background-position-y: center;
+	width: .5%;
 }
 
 .columna-derechaNorte {
@@ -123,6 +136,21 @@ body {
 	user-select: none; /* Standard syntax */
 }
 
+.header-2 {
+	margin-bottom: 40px;
+	text-align: center;
+	color: #fff;
+	background-color: var(--texto);
+	font-size: 1em;
+	border-radius: 25px;
+	position: relative;
+	align-items: center;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+	user-select: none; /* Standard syntax */
+	width: 80%;
+}
+
 .header h1 {
 	color: var(--secundario);
 	font-size: 28px;
@@ -174,10 +202,12 @@ select {
 
 .registro {
 	display: none;
+	width: 100%;
 }
 
 .registro.activo {
 	display: block;
+	width: 100%;
 }
 
 .exito {
